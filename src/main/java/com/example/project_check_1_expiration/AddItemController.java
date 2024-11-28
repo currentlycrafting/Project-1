@@ -11,6 +11,10 @@ import java.time.LocalDate;
 public class AddItemController {
     @FXML
     private TextField nameField;
+
+    @FXML
+    private TextField categoryField;
+
     @FXML
     private DatePicker storedDatePicker;
     @FXML
@@ -21,6 +25,7 @@ public class AddItemController {
     @FXML
     public void onSaveButtonClick() {
         String name = nameField.getText();
+        String category = categoryField.getText();
         LocalDate storedDate = storedDatePicker.getValue();
         LocalDate expirationDate = expirationDatePicker.getValue();
 
@@ -31,10 +36,11 @@ public class AddItemController {
             alert.setContentText("Please fill in all fields.");
             alert.showAndWait();
         } else {
-            FoodItem newItem = new FoodItem(name, storedDate, expirationDate);
+            FoodItem newItem = new FoodItem(name, category, storedDate, expirationDate);
             DataStore.addItem(newItem);
 
             nameField.clear();
+            categoryField.clear();
             storedDatePicker.setValue(null);
             expirationDatePicker.setValue(null);
 
