@@ -66,7 +66,7 @@ public class SearchItemController {
 
             resultLabel.setText("Item removed: " + itemToRemove.getName());
         } else {
-            resultLabel.setText("No item selected for removal. Please search for an item first.");
+            resultLabel.setText("No item found for removal.");
         }
     }
 }
