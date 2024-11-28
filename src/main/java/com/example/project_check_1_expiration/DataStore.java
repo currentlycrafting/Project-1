@@ -14,7 +14,7 @@ public class DataStore {
     }
 
     public static List<FoodItem> getFoodItemList() {
-        return new ArrayList<>(foodItemList);
+        return foodItemList;
     }
 
     public static int size() {
@@ -63,4 +63,5 @@ public class DataStore {
         }
     }
 }
+
 
