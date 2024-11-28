@@ -25,8 +25,6 @@ public class AddItemController {
     private DatePicker expirationDatePicker;
     @FXML
     private Button saveButton;
-    @FXML
-    private Button exportButton;
 
     @FXML
     public void onSaveButtonClick() {
@@ -57,35 +55,5 @@ public class AddItemController {
             alert.showAndWait();
         }
     }
-
-    @FXML
-    public void onExportButtonClick() {
-        try (FileWriter writer = new FileWriter("food_items.csv")) {
-            List<FoodItem> items = DataStore.getFoodItemList();
-
-            // Write header
-            writer.write("Name,Category,Stored Date,Expiration Date\n");
-
-            // Write data
-            for (FoodItem item : items) {
-                writer.write(String.format("%s,%s,%s,%s\n",
-                        item.getName(),
-                        item.getCategory(),
-                        item.getStoredDate(),
-                        item.getExpirationDate()));
-            }
-
-            Alert alert = new Alert(AlertType.INFORMATION);
-            alert.setTitle("Export Success");
-            alert.setHeaderText(null);
-            alert.setContentText("Data successfully exported to food_items.csv.");
-            alert.showAndWait();
-        } catch (IOException e) {
-            Alert alert = new Alert(AlertType.ERROR);
-            alert.setTitle("Export Error");
-            alert.setHeaderText(null);
-            alert.setContentText("An error occurred while exporting data.");
-            alert.showAndWait();
-        }
-    }
 }
+
