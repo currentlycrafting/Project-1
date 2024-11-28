@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.project_check_1_expiration.HomeController">
+    <Label text="Welcome to Decay Calculator" style="-fx-font-size: 20px;" />
+    <Button text="Add Food Item" onAction="#onAddItemClick" />
+    <Button text="Display Food Item" onAction="#onDisplayItemClick" />
+</VBox>
+
