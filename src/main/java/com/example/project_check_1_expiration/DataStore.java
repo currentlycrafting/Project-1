@@ -13,5 +13,8 @@ public class DataStore {
     public static List<FoodItem> getFoodItemList() {
         return new ArrayList<>(foodItemList);
     }
+    public static int size () {
+        return foodItemList.size();
+    }
 }
 
