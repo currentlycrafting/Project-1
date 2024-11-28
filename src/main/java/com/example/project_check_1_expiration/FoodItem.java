@@ -4,11 +4,14 @@ import java.time.LocalDate;
 
 public class FoodItem {
     private String name;
+
+    private String category;
     private LocalDate storedDate;
     private LocalDate expirationDate;
 
-    public FoodItem(String name, LocalDate storedDate, LocalDate expirationDate) {
+    public FoodItem(String name, String category, LocalDate storedDate, LocalDate expirationDate) {
         this.name = name;
+        this.category = category;
         this.storedDate = storedDate;
         this.expirationDate = expirationDate;
     }
@@ -21,6 +24,10 @@ public class FoodItem {
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getCategory() { return category; }
+
+    public void setCategory(String category) {this.category = category;}
 
     public LocalDate getStoredDate() {
         return storedDate;
@@ -38,3 +45,4 @@ public class FoodItem {
         this.expirationDate = expirationDate;
     }
 }
+
