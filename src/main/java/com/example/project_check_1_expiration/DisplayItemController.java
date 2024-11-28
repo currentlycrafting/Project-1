@@ -22,6 +22,7 @@ public class DisplayItemController {
             StringBuilder displayText = new StringBuilder();
             for (FoodItem item : foodItemList) {
                 displayText.append("Name: ").append(item.getName())
+                        .append("\nCategory: ").append(item.getCategory())
                         .append("\nStored Date: ").append(item.getStoredDate())
                         .append("\nExpiration Date: ").append(item.getExpirationDate())
                         .append("\n\n"); // Add some space between items
