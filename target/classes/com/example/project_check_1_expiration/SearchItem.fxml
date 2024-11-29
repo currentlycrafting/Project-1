@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.*?>
@@ -22,4 +21,17 @@
 
     <!-- Result Label -->
     <Label fx:id="resultLabel" text="" style="-fx-text-fill: darkgreen; -fx-font-size: 14px;" />
+
+    <!-- Progress Bar -->
+    <ProgressBar fx:id="expirationProgressBar" maxWidth="300" style="
+    -fx-background-color: #ecf0f1; /* Background color of the progress bar */
+    -fx-border-color: #3498db; /* Border color */
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    " />
+
+    <!-- Remove Button -->
+    <Button text="Remove" onAction="#onRemoveButtonClick" fx:id="removeButton"
+            style="-fx-font-size: 14px; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 8 20; -fx-border-radius: 5; -fx-background-radius: 5;"
+            disable="true" /> <!-- Initially disabled until an item is found -->
 </VBox>
