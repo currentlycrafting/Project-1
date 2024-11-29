@@ -11,6 +11,7 @@ ensuring items are safely monitored for their expiration dates and are removed w
 - **Remove a food item**: Delete an item from the list and the CSV file after confirming it in the search, otherwise removal isn't allowed.
 - **Persistent data storage**: Save and load food items from a CSV file.
 - **Simple user interface**: Built using **JavaFX** for an intuitive experience.
+- **Expiration Bar**: Custom UX that shows the progression using a bar on expiration. Closer it is the redder it becomes. The further the greener.
 
 ## 💻 **Lib/Language and Imports Used**
 - **Programming Language**: **Java**
@@ -60,7 +61,6 @@ com.example.project_check_1_expiration
 - **Expiration Counter & Notification System and Search**: Create a new list that shows all expired or soon to be expired items.
 - **SKUS Number**: Custom Bar-Code number that allows for better search of single items instead of searching through by name
 - **Advanced Data Storage**: Transition CSVs to something more robust, possibly AWS
-- **Expiration Bar**: Custom UX that shows the progression using a bar on expiration. Closer it is the redder it becomes. The further the greener.
 
 
 ## 📫 **Contact**
